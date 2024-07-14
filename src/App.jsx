@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import './App.css'
 import Form from "./components/Form.jsx";
+import List from "./components/List.jsx";
 
 function App() {
 const API_URL = 'https://jsonplaceholder.typicode.com/';
@@ -27,6 +28,7 @@ const[items,setItems] = useState([]);
   return (
     <>
         <Form reqType={reqType} setReqType={setReqType}/>
+        <List items={items}/>
 
     </>
   )
